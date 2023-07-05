@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.printer.g153" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>g153printer</name>
+    <js-module name="g153printer" src="www/g153printer.js">
+        <clobbers target="g153Printer" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="g153Printer">
+                <param name="android-package" value="com.printer.g153.g153printer" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission..ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+            <uses-permission android:name="android.permission..CHANGE_WIFI_MULTICAST_STATE" />
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+            <uses-permission android:name="android.permission.INTERNET"/>
+
+        </config-file>
+        <source-file src="src/android/g153printer.java" target-dir="src/com/printer/g153/g153printer" />
+        <source-file src="src/android/PrinterData.java" target-dir="src/com/printer/g153/PrinterData" />
+        <source-file src="src/android/Utils.java" target-dir="src/com/printer/g153/Utils" />
+        <lib-file src="src/android/libs/icod_3.1.6.jar" />
+    </platform>
+</plugin>

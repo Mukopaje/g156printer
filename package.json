@@ -1,0 +1,17 @@
+{
+  "name": "com.printer.g153",
+  "version": "1.0.0",
+  "description": "Cordova printer for G153 POS Printer",
+  "cordova": {
+    "id": "com.printer.g153",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Mukopaje Singogo",
+  "license": "ISC"
+}
